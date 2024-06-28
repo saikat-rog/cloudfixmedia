@@ -42,7 +42,7 @@ const Welcome = () => {
             </button>
           </div>
           <div className=" md:hidden text-center p-4 text-white rounded-full bg-blue-700 text-3xl">
-            Book a Call
+            Book a temp Call
           </div>
         </div>
       </section>
