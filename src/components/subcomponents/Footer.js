@@ -8,29 +8,29 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-bold mb-4">Company</h3>
             <ul>
-              <li><a href="#" className="text-gray-400 hover:text-white">About Us</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white">Careers</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white">Press</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white">Blog</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white">FAQs</a></li>
+              <li className="text-gray-400 hover:text-white">About Us</li>
+              <li className="text-gray-400 hover:text-white">Careers</li>
+              <li className="text-gray-400 hover:text-white">Press</li>
+              <li className="text-gray-400 hover:text-white">Blog</li>
+              <li className="text-gray-400 hover:text-white">FAQs</li>
             </ul>
           </div>
           <div>
             <h3 className="text-lg font-bold mb-4">Contact</h3>
             <ul>
-              <li><a href="#" className="text-gray-400 hover:text-white">Help Center</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white">Support</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white">Privacy Policy</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white">Terms of Service</a></li>
+              <li className="text-gray-400 hover:text-white">Help Center</li>
+              <li className="text-gray-400 hover:text-white">Support</li>
+              <li className="text-gray-400 hover:text-white">Privacy Policy</li>
+              <li className="text-gray-400 hover:text-white">Terms of Service</li>
             </ul>
           </div>
           <div>
             <h3 className="text-lg font-bold mb-4">Follow Us</h3>
             <ul className="flex space-x-4">
-              <li><a href="#" className="text-gray-400 hover:text-white"><i className="fab fa-facebook-f"></i> Facebook</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white"><i className="fab fa-twitter"></i> Twitter</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white"><i className="fab fa-instagram"></i> Instagram</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white"><i className="fab fa-linkedin-in"></i> LinkedIn</a></li>
+              <li className="text-gray-400 hover:text-white"><i className="fab fa-facebook-f"></i> Facebook</li>
+              <li className="text-gray-400 hover:text-white"><i className="fab fa-twitter"></i> Twitter</li>
+              <li className="text-gray-400 hover:text-white"><i className="fab fa-instagram"></i> Instagram</li>
+              <li className="text-gray-400 hover:text-white"><i className="fab fa-linkedin-in"></i> LinkedIn</li>
             </ul>
           </div>
         </div>
