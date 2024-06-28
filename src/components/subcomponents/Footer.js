@@ -9,7 +9,7 @@ const Footer = () => {
             <h3 className="text-lg font-bold mb-4">Company</h3>
             <ul>
               <li className="text-gray-400 hover:text-white">About Uss</li>
-              <li className="text-gray-400 hover:text-white">Careers</li>
+              <li className="text-gray-400 hover:text-white">Careerss</li>
               <li className="text-gray-400 hover:text-white">Press</li>
               <li className="text-gray-400 hover:text-white">Blog</li>
               <li className="text-gray-400 hover:text-white">FAQs</li>
