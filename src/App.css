@@ -36,3 +36,14 @@
     transform: rotate(360deg);
   }
 }
+
+/* Add this to your src/index.css or src/App.css */
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
