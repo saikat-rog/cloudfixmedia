@@ -31,7 +31,7 @@ const NavBar = () => {
   ];
 
   return (
-    <nav className="fixed w-full flex justify-between items-center bg-white p-3 md:px-28 py-3">
+    <nav className="fixed w-full flex justify-between items-center bg-white p-3 md:px-28 py-3 z-50">
       <div className="text-xl font-bold">CloudFixMedia</div>
       <button onClick={handleNav} className="md:hidden">
         <FontAwesomeIcon icon={faBars} size="lg" />

@@ -54,7 +54,7 @@ const Services = () => {
         {services.map((item) => (
           <div
             key={item.id}
-            className="group max-w-sm rounded overflow-hidden shadow-lg bg-white p-6 transition duration-300 ease-in-out transform hover:scale-105 hover:bg-blue-700 hover:text-white"
+            className="group max-w-sm rounded shadow-lg bg-white p-6 transition duration-300 ease-in-out transform hover:scale-105 hover:bg-blue-700 hover:text-white"
           >
             <FontAwesomeIcon icon={item.logo} size="2x" className="mb-4" />
             <div className="font-bold text-xl mb-2">{item.title}</div>
