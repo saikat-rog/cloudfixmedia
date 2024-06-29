@@ -1,12 +1,10 @@
 import React from "react";
+import StartJourney from "./StartJourney";
 
 const WhyUs = () => {
   return (
     <div className=" p-6 md:p-28">
       <div className=" w-full min-h-screen flex flex-col justify-center font-regular md:pr-52">
-        <span className=" text-slate-500 text-xl">
-          Hello It's nice to see you here!
-        </span>
         <span className=" text-5xl md:text-7xl font-semibold text-blue-900">
           Why CloudFixMedia?
         </span>
@@ -27,6 +25,9 @@ const WhyUs = () => {
             issues.
           </div>
         </p>
+        <div className=" flex flex-col items-start pt-5 ">
+          <button className=" rounded-full bg-blue-700 text-xl text-white p-5 ">Start your journey with us</button>
+        </div>
       </div>
     </div>
   );

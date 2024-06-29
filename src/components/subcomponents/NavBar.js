@@ -1,15 +1,25 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const NavBar = () => {
   // State to manage the navbar's visibility
   const [nav, setNav] = useState(false);
+  const [active, setActive] = useState(null); // Initialize active state with null
 
   // Toggle function to handle the navbar's display
   const handleNav = () => {
     setNav(!nav);
+  };
+
+  // Get the current pathname using useLocation hook
+  const location = useLocation();
+
+  // Function to set active state based on clicked item
+  const handleSetActive = (index) => {
+    setActive(index);
+    setNav(false); // Close the mobile menu when an item is clicked
   };
 
   // Array containing navigation items
@@ -35,8 +45,17 @@ const NavBar = () => {
       >
         <ul className="flex flex-col items-center space-y-4 p-4">
           {navItems.map((item) => (
-            <li key={item.id} className="text-lg" onClick={handleNav}>
-              <Link to={item.to}>{item.text}</Link>
+            <li
+              key={item.id}
+              className="text-lg"
+              onClick={() => handleSetActive(item.id)}
+            >
+              <Link
+                to={item.to}
+                className={location.pathname === item.to ? "text-blue-900 font-bold underline" : ""}
+              >
+                {item.text}
+              </Link>
             </li>
           ))}
         </ul>
@@ -45,11 +64,21 @@ const NavBar = () => {
       {/* Desktop menu */}
       <ul className="hidden md:flex space-x-6">
         {navItems.map((item) => (
-          <li key={item.id} className="text-lg">
-            <Link to={item.to}>{item.text}</Link>
+          <li
+            key={item.id}
+            className={`text-lg ${active === item.id ? "text-blue-900 font-bold" : ""}`}
+            onClick={() => handleSetActive(item.id)}
+          >
+            <Link
+              to={item.to}
+              className={location.pathname === item.to ? "text-blue-900 font-bold underline" : ""}
+            >
+              {item.text}
+            </Link>
           </li>
         ))}
       </ul>
+
       {/* Desktop Book a call button */}
       <button className=" hidden md:block md:bg-blue-700 rounded-full h-10 w-28 text-white">
         Book a Call
