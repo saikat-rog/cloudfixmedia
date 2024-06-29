@@ -1,5 +1,4 @@
 import React from "react";
-import StartJourney from "./StartJourney";
 
 const WhyUs = () => {
   return (
