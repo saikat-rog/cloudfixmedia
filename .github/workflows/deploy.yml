@@ -18,6 +18,9 @@ jobs:
         npm install
         npm run build
 
+    - name: Verify build directory
+      run: ls build/
+
     - name: Deploy to Hostinger via FTP
       uses: SamKirkland/FTP-Deploy-Action@4.1.0
       with:
