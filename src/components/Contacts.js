@@ -3,7 +3,7 @@ import React from 'react';
 const Contacts = () => {
   return (
     <div className='min-h-screen flex flex-col justify-center items-center bg-gray-200 p-12 md:p-28'>
-      <h1 className='text-7xl text-blue-700 mb-10 font-semibold'>Contact</h1>
+      <h1 className='text-7xl text-blue-900 mb-10 font-semibold'>Contact</h1>
       <form className=' bg-white shadow-md rounded-3xl p-8 w-full max-w-2xl'>
         <div className='mb-4'>
           <label className='block text-gray-700 text-sm font-bold mb-2 rounded-xl' htmlFor='name'>

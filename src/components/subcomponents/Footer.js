@@ -1,41 +1,77 @@
-import React from 'react';
+import React from "react";
 
 const Footer = () => {
   return (
-    <footer className=" bg-blue-950 text-gray-200 py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
-          <div>
-            <h3 className="text-lg font-bold mb-4">Company</h3>
-            <ul>
-              <li className="text-gray-400 hover:text-white">About Us</li>
-              <li className="text-gray-400 hover:text-white">Careers</li>
-              <li className="text-gray-400 hover:text-white">Press</li>
-              <li className="text-gray-400 hover:text-white">Blog</li>
-              <li className="text-gray-400 hover:text-white">FAQs</li>
-            </ul>
-          </div>
-          <div>
-            <h3 className="text-lg font-bold mb-4">Contact</h3>
-            <ul>
-              <li className="text-gray-400 hover:text-white">Help Center</li>
-              <li className="text-gray-400 hover:text-white">Support</li>
-              <li className="text-gray-400 hover:text-white">Privacy Policy</li>
-              <li className="text-gray-400 hover:text-white">Terms of Service</li>
-            </ul>
-          </div>
-          <div>
-            <h3 className="text-lg font-bold mb-4">Follow Us</h3>
-            <ul className="flex space-x-4">
-              <li className="text-gray-400 hover:text-white"><i className="fab fa-facebook-f"></i> Facebook</li>
-              <li className="text-gray-400 hover:text-white"><i className="fab fa-twitter"></i> Twitter</li>
-              <li className="text-gray-400 hover:text-white"><i className="fab fa-instagram"></i> Instagram</li>
-              <li className="text-gray-400 hover:text-white"><i className="fab fa-linkedin-in"></i> LinkedIn</li>
-            </ul>
+    <footer className=" bg-blue-950 text-white p-4 md:p-12">
+      <div className=" grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-10">
+        {/* Grid1: Brand Statement */}
+        <div className="">
+          <div className=" flex flex-col gap-5">
+            <p>
+              <span className=" text-3xl font-bold">Enhancing</span>
+              <br />
+              online presence by enhancing video editing scripting and graphics.
+            </p>
+            <div>&copy; 2024. All rights reserved.</div>
           </div>
         </div>
-        <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-500">
-          &copy; 2024 CloudFixMedia. All rights reserved.
+        {/* Grid2: Services*/}
+        <div className=" flex flex-col gap-5">
+          <h3 className=" text-xl font-bold">Services we offer</h3>
+          <div className=" flex flex-col gap-2">
+            <div>Organic Content</div>
+            <div> Leads-generation</div>
+            <div> Social-media Management</div>
+            <div> Brand Identity </div>
+          </div>
+        </div>
+        {/* Grid3: Contact */}
+        <div className=" flex flex-col gap-5">
+          <h3 className=" text-xl font-bold">Contact us</h3>
+          <div className=" flex flex-col gap-2">
+            <div>Phone: 8100110638</div>
+            <div>Email: cloudfixmedia@gmail.com</div>
+            <div className=" flex flex-col justify-start gap-2">
+              <h3 className=" text-xl font-semibold">Let us contact you</h3>
+              <input
+                className=" rounded-md p-3 max-w-80"
+                placeholder="Drop your email here"
+              ></input>
+              <button className=" bg-blue-700 rounded-md p-2 w-20">Submit</button>
+            </div>
+          </div>
+        </div>
+        {/* Grid4: Appointment schedule */}
+        <div className="flex bg-gray-100">
+          <div className="max-w-lg w-full bg-white shadow-lg rounded-lg overflow-hidden">
+            {/* Calendar Header */}
+            <div className="bg-gray-200 px-6 py-4">
+              <h2 className="text-xl font-bold text-gray-800">July 2024</h2>
+            </div>
+
+            {/* Calendar Body */}
+            <div className="grid grid-cols-7 gap-1 px-4 py-3">
+              {/* Days of the week */}
+              {["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].map((day) => (
+                <div
+                  key={day}
+                  className="text-sm text-gray-500 font-semibold text-center"
+                >
+                  {day}
+                </div>
+              ))}
+
+              {/* Days grid */}
+              {Array.from({ length: 31 }, (_, i) => i + 1).map((day) => (
+                <div
+                  key={day}
+                  className="text-sm text-gray-800 font-medium text-center py-2 border border-gray-200"
+                >
+                  {day}
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </footer>
