@@ -5,7 +5,7 @@ const OurWorks = () => {
   return (
     <section className="w-full h-full flex flex-col gap-1 py-14 items-center font-regular">
       <div className="text-center text-5xl font-bold text-textColorLarge">Our works</div>
-      <p>Click on any video to pause</p>
+      <p>Click on any video to play or pause</p>
       <div className="flex justify-center p-10">
         <WorkGallery />
       </div>

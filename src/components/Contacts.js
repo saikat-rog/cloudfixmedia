@@ -6,10 +6,12 @@ import {
   faPhone,
   faClock,
 } from "@fortawesome/free-solid-svg-icons";
+import { Helmet } from "react-helmet";
 
 const Contacts = () => {
   return (
     <div className=" flex flex-col md:flex-row w-full min-h-screen">
+      <Helmet><title>Contact</title></Helmet>
       {/* Left col for the form */}
       <div className=" bg-sectionBackground w-full md:w-1/3 py-28 px-16">
         <div className=" flex flex-col gap-5">

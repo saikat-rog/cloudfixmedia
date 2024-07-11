@@ -1,8 +1,10 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 
 const About = () => {
   return (
     <div className=" h-screen flex flex-col gap-10 justify-center items-center text-center font-regular mx-10 md:mx-52">
+      <Helmet><title>About</title></Helmet>
       <div className=" text-4xl md:text-8xl font-semibold text-textColorLarge">About Us</div>
       <div className=" text-xl md:text-3xl">
         Cloudfix Media emerged from a fervor for creative expression and a

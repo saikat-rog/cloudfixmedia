@@ -7,6 +7,7 @@ import {
   faIdBadge,
   faLightbulb,
 } from "@fortawesome/free-solid-svg-icons";
+import { Helmet } from "react-helmet";
 
 const Services = () => {
   const services = [
@@ -53,6 +54,7 @@ const Services = () => {
 
   return (
     <div className="min-h-screen w-full p-20 md:p-28">
+      <Helmet><title>Services</title></Helmet>
       {/* Our Services */}
       <div>
         {/* Our services title */}
