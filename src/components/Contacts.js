@@ -13,7 +13,7 @@ const Contacts = () => {
       {/* Left col for the form */}
       <div className=" bg-sectionBackground w-full md:w-1/3 py-28 px-16">
         <div className=" flex flex-col gap-5">
-          <div className=" text-textColorLarge font-bold text-4xl">
+          <div className=" text-textColorLarge font-bold text-2xl md:text-4xl">
             Send us a message
           </div>
           <form className=" flex flex-col gap-7">
