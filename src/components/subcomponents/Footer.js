@@ -14,7 +14,7 @@ const Footer = () => {
   const linkedinUrl = "https://www.linkedin.com/in/cloudfix-media-63a865312/";
 
   return (
-    <footer className=" bg-blue-950 text-white p-4 md:p-12">
+    <footer className=" bg-blue-950 text-white p-6 md:p-12">
       <div className=" grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-10">
         {/* Grid1: Brand Statement */}
         <div className="">
