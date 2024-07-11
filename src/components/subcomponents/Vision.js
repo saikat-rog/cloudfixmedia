@@ -16,7 +16,7 @@ const Vision = () => {
 
   return (
     <div>
-      <section className=" w-full min-h-screen text-black flex items-center justify-center font-regular bg-slate-100">
+      <section className=" w-full min-h-screen text-black flex items-center justify-center font-regular bg-sectionBackground">
         <div className=" mt-20 p-10 flex flex-wrap w-full">
           {/* Vision details */}
           <div className="flex md:flex-1 flex-wrap gap-8 justify-center">
