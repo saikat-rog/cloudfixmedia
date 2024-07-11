@@ -41,8 +41,8 @@ const Welcome = () => {
               Lets Talk
             </button>
           </div>
-          <div className=" md:hidden text-center p-4 text-white rounded-full bg-buttonPrimaryColor text-3xl">
-            Book a temp Call
+          <div className=" md:hidden text-center p-2 text-white rounded-full bg-buttonPrimaryColor text-xl">
+            Book a Call
           </div>
         </div>
       </section>
