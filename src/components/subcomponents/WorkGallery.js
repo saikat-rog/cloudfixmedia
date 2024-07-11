@@ -1,16 +1,16 @@
 import React from 'react';
-import Workpics from './WorkPics';
+import demoVid from "../../assets/demo.mp4";
 
 const WorkGallery = () => {
   return (
     <div className="w-full">
       <div className="flex flex-wrap gap-8 justify-center">
-        <Workpics cardno='1' />
-        <Workpics cardno='2' />
-        <Workpics cardno='3' />
-        <Workpics cardno='4' />
-        <Workpics cardno='5' />
-        <Workpics cardno='6' />
+        <video src={demoVid} autoPlay muted loop className=' h-80 rounded-xl'/>
+        <video src={demoVid} autoPlay muted loop className=' h-80 rounded-xl'/>
+        <video src={demoVid} autoPlay muted loop className=' h-80 rounded-xl'/>
+        <video src={demoVid} autoPlay muted loop className=' h-80 rounded-xl'/>
+        <video src={demoVid} autoPlay muted loop className=' h-80 rounded-xl'/>
+        <video src={demoVid} autoPlay muted loop className=' h-80 rounded-xl'/>
       </div>
     </div>
   );
