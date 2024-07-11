@@ -39,7 +39,7 @@ const WorkGallery = () => {
   return (
     <div className="w-full">
       <div className="flex flex-wrap gap-8 justify-center">
-        <div className="flex flex-wrap gap-8">
+        <div className="flex flex-wrap justify-center gap-8">
           {videos.map((video, index) => (
             <div key={video.id} className="flex flex-col">
               <video
@@ -47,7 +47,7 @@ const WorkGallery = () => {
                 src={video.vid}
                 autoPlay
                 muted
-                className="h-80 rounded-xl cursor-pointer"
+                className=" h-64 md:h-auto rounded-xl cursor-pointer"
                 onClick={() => handleVideoClick(index)}
               />
               <FontAwesomeIcon
