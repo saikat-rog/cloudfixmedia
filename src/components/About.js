@@ -3,7 +3,7 @@ import React from "react";
 const About = () => {
   return (
     <div className=" h-screen flex flex-col justify-center items-center text-center font-regular mx-10 md:mx-52">
-      <div className=" text-4xl md:text-8xl font-semibold text-blue-900">About Us</div>
+      <div className=" text-4xl md:text-8xl font-semibold text-textColorLarge">About Us</div>
       <div className=" text-xl md:text-3xl">
         Cloudfix Media emerged from a fervor for creative expression and a
         vision to consolidate all media services under one roof. Our founders
@@ -18,7 +18,7 @@ const About = () => {
         organic social media strategies. Creativity, integrity, and
         collaboration guide every project we undertake.
       </div>
-      <button className=" my-10 bg-blue-700 p-5 rounded-full w-40 text-white">Learn more</button>
+      <button className=" my-10 bg-buttonPrimaryColor hover:bg-buttonSecondaryColor hover:text-black p-5 rounded-full w-40 text-white">Learn more</button>
     </div>
   );
 };

@@ -4,7 +4,7 @@ import logo from "../../assets/logo.png";
 const Welcome = () => {
   return (
     <div>
-      <section className="w-full h-screen text-blue-900 flex items-center justify-center font-regular">
+      <section className="w-full h-screen text-textColorLarge flex items-center justify-center font-regular">
         <div className=" p-10 md:p-28 grid grid-cols-1 md:grid-cols-2 w-full">
           {/* welcome quote */}
           <div>
@@ -35,13 +35,13 @@ const Welcome = () => {
             <input
               type="email"
               placeholder="Enter your Email"
-              class="block px-4 py-3 text-gray-800 rounded-full border border-gray-300 focus:outline-none focus:border-blue-700 mr-3 bg-slate-100 w-auto md:w-72"
+              class="block px-4 py-3 text-gray-800 rounded-full border border-gray-300 focus:outline-none focus:border-buttonPrimaryColor mr-3 bg-slate-100 w-auto md:w-72"
             />
-            <button className=" bg-blue-700 rounded-full h-30 w-28 md:w-32 text-white">
+            <button className=" bg-buttonPrimaryColor hover:bg-buttonSecondaryColor hover:text-black rounded-full h-30 w-28 md:w-32 text-white">
               Lets Talk
             </button>
           </div>
-          <div className=" md:hidden text-center p-4 text-white rounded-full bg-blue-700 text-3xl">
+          <div className=" md:hidden text-center p-4 text-white rounded-full bg-buttonPrimaryColor text-3xl">
             Book a temp Call
           </div>
         </div>

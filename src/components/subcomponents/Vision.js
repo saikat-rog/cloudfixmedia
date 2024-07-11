@@ -29,7 +29,7 @@ const Vision = () => {
           </div>
           {/* Vision text */}
           <div className=" mt-10 flex md:flex-1 flex-col">
-            <div className=" text-5xl font-semibold text-blue-900">{VisionTitle}</div>
+            <div className=" text-5xl font-semibold text-textColorLarge">{VisionTitle}</div>
             <p className=" mt-8 text-xl">
               {VisionParagraph}
             </p>

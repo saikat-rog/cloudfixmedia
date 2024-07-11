@@ -56,7 +56,7 @@ const Services = () => {
       {/* Our Services */}
       <div>
         {/* Our services title */}
-        <div className="flex flex-col items-center text-4xl md:text-8xl text-blue-900 font-semibold">
+        <div className="flex flex-col items-center text-4xl md:text-8xl text-textColorLarge font-semibold">
           Our Services
         </div>
         {/* Our services description */}
@@ -64,7 +64,7 @@ const Services = () => {
           {services.map((item) => (
             <div
               key={item.id}
-              className="group max-w-sm rounded shadow-lg bg-white p-6 transition duration-300 ease-in-out transform hover:scale-105 hover:bg-blue-700 hover:text-white"
+              className="group max-w-sm rounded shadow-lg bg-white p-6 transition duration-300 ease-in-out transform hover:scale-105 hover:bg-buttonPrimaryColor hover:text-white"
             >
               <FontAwesomeIcon icon={item.logo} size="2x" className="mb-4" />
               <div className="font-bold text-xl mb-2">{item.title}</div>

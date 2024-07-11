@@ -52,7 +52,7 @@ const NavBar = () => {
             >
               <Link
                 to={item.to}
-                className={location.pathname === item.to ? "text-blue-900 font-bold underline" : ""}
+                className={location.pathname === item.to ? "text-textColorLarge font-bold underline" : ""}
               >
                 {item.text}
               </Link>
@@ -66,12 +66,12 @@ const NavBar = () => {
         {navItems.map((item) => (
           <li
             key={item.id}
-            className={`text-lg ${active === item.id ? "text-blue-900 font-bold" : ""}`}
+            className={`text-lg ${active === item.id ? "text-textColorLarge font-bold" : ""}`}
             onClick={() => handleSetActive(item.id)}
           >
             <Link
               to={item.to}
-              className={location.pathname === item.to ? "text-blue-900 font-bold underline" : ""}
+              className={location.pathname === item.to ? "text-textColorLarge font-bold underline" : ""}
             >
               {item.text}
             </Link>
@@ -80,7 +80,7 @@ const NavBar = () => {
       </ul>
 
       {/* Desktop Book a call button */}
-      <button className=" hidden md:block md:bg-blue-700 rounded-full h-10 w-28 text-white">
+      <button className=" hidden md:block md:bg-buttonPrimaryColor hover:bg-buttonSecondaryColor hover:text-black rounded-full h-10 w-28 text-white">
         Book a Call
       </button>
     </nav>

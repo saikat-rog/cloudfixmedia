@@ -56,7 +56,7 @@ const Footer = () => {
                 className=" rounded-md p-3 max-w-80"
                 placeholder="Drop your email here"
               ></input>
-              <button className=" bg-blue-700 rounded-md p-2 w-20">Submit</button>
+              <button className=" bg-buttonPrimaryColor hover:bg-buttonSecondaryColor hover:text-black rounded-md p-2 w-20">Submit</button>
             </div>
           </div>
         </div>
@@ -65,7 +65,7 @@ const Footer = () => {
           <h3 className=" text-xl font-bold">Schedule your appointment</h3>
           <form className=" text-black flex flex-col gap-4 items-start">
             <input className=" p-2 rounded-lg" type="date"/>
-            <button className=" text-white bg-blue-700 px-5 py-2 rounded-lg">Book</button>
+            <button className=" text-white bg-buttonPrimaryColor hover:bg-buttonSecondaryColor hover:text-black px-5 py-2 rounded-lg">Book</button>
           </form>
           
         </div>

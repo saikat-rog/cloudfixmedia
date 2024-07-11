@@ -31,14 +31,14 @@ const Testimonials = () => {
   return (
     <section className="bg-gray-100 py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold text-center mb-8 text-blue-900">
+        <h2 className="text-3xl font-bold text-center mb-8 text-textColorLarge">
           What Our Clients Say
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map((testimonial) => (
             <div
               key={testimonial.id}
-              className="max-w-xl mx-auto p-6 bg-white shadow-md rounded-lg overflow-hidden transition duration-300 ease-in-out transform hover:scale-105 hover:bg-blue-700 hover:text-white"
+              className="max-w-xl mx-auto p-6 bg-white shadow-md rounded-lg overflow-hidden transition duration-300 ease-in-out transform hover:scale-105 hover:bg-buttonPrimaryColor hover:text-white"
             >
               <div className="flex items-center mb-4">
                 <div className="h-12 w-12 rounded-full overflow-hidden mr-4">
