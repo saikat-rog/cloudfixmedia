@@ -11,12 +11,12 @@ const Contacts = () => {
   return (
     <div className=" flex flex-col md:flex-row w-full min-h-screen">
       {/* Left col for the form */}
-      <div className=" bg-sectionBackground w-full md:w-1/3 pt-28">
+      <div className=" bg-sectionBackground w-full md:w-1/3 py-28 px-16">
         <div className=" flex flex-col gap-5">
-          <div className=" ml-16 text-textColorLarge font-bold text-4xl">
+          <div className=" text-textColorLarge font-bold text-4xl">
             Send us a message
           </div>
-          <form className=" flex flex-col gap-7 px-16 py-16">
+          <form className=" flex flex-col gap-7">
             <input
               type="text"
               placeholder="Name"
@@ -36,14 +36,14 @@ const Contacts = () => {
               placeholder="Your message"
               className="bg-transparent border-b-2 border-slate-300 p-3 focus:outline-none"
             ></textarea>
-            <button className=" hidden md:block md:bg-buttonPrimaryColor hover:bg-buttonSecondaryColor hover:text-black rounded-full h-10 w-28 text-white">
+            <button className="bg-buttonPrimaryColor hover:bg-buttonSecondaryColor hover:text-black rounded-full h-10 w-28 text-white">
               Send
             </button>
           </form>
         </div>
       </div>
       {/* Right col for the contact info */}
-      <div className=" w-full md:w-2/3  py-28 px-20">
+      <div className=" w-full md:w-2/3  py-28 px-10 md:px-20">
         <div className="flex flex-col gap-16">
           {/* Heading */}
           <div className="flex flex-col">
