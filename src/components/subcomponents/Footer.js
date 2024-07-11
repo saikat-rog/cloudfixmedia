@@ -1,6 +1,18 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFacebook } from "@fortawesome/free-brands-svg-icons";
+import { faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { faTwitter } from "@fortawesome/free-brands-svg-icons";
+import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
+
 
 const Footer = () => {
+
+  const facebookUrl = "https://www.facebook.com/profile.php?id=61561001504713";
+  const instagramUrl = "https://www.instagram.com/cloudfix.media";
+  const xUrl = "https://x.com/CloudfixM91497";
+  const linkedinUrl = "https://www.linkedin.com/in/cloudfix-media-63a865312/";
+
   return (
     <footer className=" bg-blue-950 text-white p-4 md:p-12">
       <div className=" grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-10">
@@ -12,6 +24,13 @@ const Footer = () => {
               <br />
               online presence by enhancing video editing scripting and graphics.
             </p>
+            {/* social icons */}
+            <div className=" flex flex-row gap-5 text-3xl">
+              <a href={facebookUrl} target="blank"><FontAwesomeIcon icon={faFacebook}></FontAwesomeIcon></a>
+              <a href={instagramUrl} target="blank"><FontAwesomeIcon icon={faInstagram}></FontAwesomeIcon></a>
+              <a href={xUrl} target="blank"><FontAwesomeIcon icon={faTwitter}></FontAwesomeIcon></a>
+              <a href={linkedinUrl} target="blank"><FontAwesomeIcon icon={faLinkedin}></FontAwesomeIcon></a>
+            </div>
             <div>&copy; 2024. All rights reserved.</div>
           </div>
         </div>
@@ -42,36 +61,13 @@ const Footer = () => {
           </div>
         </div>
         {/* Grid4: Appointment schedule */}
-        <div className="flex bg-gray-100">
-          <div className="max-w-lg w-full bg-white shadow-lg rounded-lg overflow-hidden">
-            {/* Calendar Header */}
-            <div className="bg-gray-200 px-6 py-4">
-              <h2 className="text-xl font-bold text-gray-800">July 2024</h2>
-            </div>
-
-            {/* Calendar Body */}
-            <div className="grid grid-cols-7 gap-1 px-4 py-3">
-              {/* Days of the week */}
-              {["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].map((day) => (
-                <div
-                  key={day}
-                  className="text-sm text-gray-500 font-semibold text-center"
-                >
-                  {day}
-                </div>
-              ))}
-
-              {/* Days grid */}
-              {Array.from({ length: 31 }, (_, i) => i + 1).map((day) => (
-                <div
-                  key={day}
-                  className="text-sm text-gray-800 font-medium text-center py-2 border border-gray-200"
-                >
-                  {day}
-                </div>
-              ))}
-            </div>
-          </div>
+        <div className=" flex flex-col gap-5">
+          <h3 className=" text-xl font-bold">Schedule your appointment</h3>
+          <form className=" text-black flex flex-col gap-4 items-start">
+            <input className=" p-2 rounded-lg" type="date"/>
+            <button className=" text-white bg-blue-700 px-5 py-2 rounded-lg">Book</button>
+          </form>
+          
         </div>
       </div>
     </footer>
