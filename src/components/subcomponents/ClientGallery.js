@@ -8,7 +8,7 @@ const ClientGallery = () => {
   const getClientsData = async () => {
     try {
       const response = await Axios.get(
-        `${process.env.REACT_APP_BASE_URL_BACKEND}/api/clients`
+        `http://16.171.177.95:5000/api/clients`
       );
       setClientsData(response.data);
     } catch (error) {

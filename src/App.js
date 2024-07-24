@@ -13,6 +13,7 @@ import Contacts from "./components/Contacts";
 import About from "./components/About";
 import { useEffect } from "react";
 
+
 function App() {
 
   const ScrollToTop = () => {
