@@ -12,7 +12,7 @@ const ClientGallery = () => {
       );
       setClientsData(response.data);
     } catch (error) {
-      console.log("Error!");
+      console.log(error);
     }
   };
 
