@@ -1,23 +1,36 @@
-import React, { useRef, useState } from "react";
-import vid1 from "../../assets/vid1.mp4";
-import vid2 from "../../assets/vid2.mp4";
-import vid3 from "../../assets/vid3.mp4";
-import vid4 from "../../assets/vid4.mp4";
-import vid5 from "../../assets/vid5.mp4";
+import React, { useRef, useState, useEffect } from "react";
+import Axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faVolumeHigh, faVolumeXmark } from "@fortawesome/free-solid-svg-icons";
 
 const WorkGallery = () => {
-  const videoRefs = [useRef(null), useRef(null), useRef(null), useRef(null), useRef(null)];
-  const [soundStates, setSoundStates] = useState(Array(videoRefs.length).fill(false));
+  const [videos, setVideos] = useState([]);
+  const [videoRefs, setVideoRefs] = useState([]);
+  const [soundStates, setSoundStates] = useState([]);
 
-  const videos = [
-    { id: 1, vid: vid1, vidRef: videoRefs[0] },
-    { id: 2, vid: vid2, vidRef: videoRefs[1] },
-    { id: 3, vid: vid3, vidRef: videoRefs[2] },
-    { id: 4, vid: vid4, vidRef: videoRefs[3] },
-    { id: 5, vid: vid5, vidRef: videoRefs[4] },
-  ];
+  useEffect(() => {
+    const fetchVideos = async () => {
+      try {
+        const response = await Axios.get(
+          `${process.env.REACT_APP_BASE_URL_BACKEND}/api/works`
+        );
+        const videoData = response.data;
+
+        // Create refs for each video
+        const videoRefsArray = videoData.map(() => React.createRef());
+        const initialSoundStates = videoData.map(() => false);
+
+        // Set state with fetched video data, refs, and initial sound states
+        setVideos(videoData);
+        setVideoRefs(videoRefsArray);
+        setSoundStates(initialSoundStates);
+      } catch (error) {
+        console.error("Error fetching video data:", error);
+      }
+    };
+
+    fetchVideos();
+  }, []);
 
   const handleVideoClick = (index) => {
     const video = videoRefs[index].current;
@@ -43,11 +56,11 @@ const WorkGallery = () => {
           {videos.map((video, index) => (
             <div key={video.id} className="flex flex-col">
               <video
-                ref={video.vidRef}
-                src={video.vid}
+                ref={videoRefs[index]}
+                src={video.video} // Assuming the API returns a 'video' field for the video source
                 autoPlay
                 muted
-                className=" h-64 md:h-auto rounded-xl cursor-pointer"
+                className="h-64 md:h-auto rounded-xl cursor-pointer"
                 onClick={() => handleVideoClick(index)}
               />
               <FontAwesomeIcon

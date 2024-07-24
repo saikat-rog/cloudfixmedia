@@ -1,23 +1,30 @@
-import React from "react";
-import lakshay from "../../assets/lakshay.png";
-import nmurail from "../../assets/nmurail.png";
-import sankhakun from "../../assets/sankhakun.png";
-import ankit from "../../assets/ankit.png";
-import quickbits from "../../assets/quickbits.png";
+import React, { useState, useEffect } from "react";
+import Axios from "axios";
 
 const ClientGallery = () => {
-  const Pics = [
-    { id: 1, name: "Lakshay Thakur", path: lakshay },
-    { id: 2, name: "N Murali", path: nmurail },
-    { id: 3, name: "Sankho Kun", path: sankhakun },
-    { id: 4, name: "Ankit Gupta", path: ankit },
-    { id: 5, name: "QuickBits", path: quickbits },
-  ];
+  const [clientsData, setClientsData] = useState([]);
+  //const [isLoading, setLoading] = useState([]);
+
+  const getClientsData = async () => {
+    try {
+      const response = await Axios.get(
+        `${process.env.REACT_APP_BASE_URL_BACKEND}/api/clients`
+      );
+      setClientsData(response.data);
+    } catch (error) {
+      console.log("Error!");
+    }
+  };
+
+  useEffect(() => {
+    getClientsData();
+  }, []);
+
   return (
       <div className="flex flex-wrap md:gap-8 justify-center w-full">
-        {Pics.map((item) => ( 
+        {clientsData.map((item) => ( 
           <div className="flex flex-col items-center justify-center text-2xl">
-            <img src={item.path} alt={item.name} className=" h-40 md:h-64"/>
+            <img src={item.image} alt={item.name} className=" h-40 md:h-64"/>
             {item.name}
           </div>
         ))}
