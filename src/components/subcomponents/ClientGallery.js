@@ -8,7 +8,7 @@ const ClientGallery = () => {
   const getClientsData = async () => {
     try {
       const response = await Axios.get(
-        `${process.env.REACT_APP_BASE_URL_BACKEND}/api/clients`
+        `https://api.cloudfixmedia.com/api/clients`
       );
       setClientsData(response.data);
     } catch (error) {

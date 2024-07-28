@@ -12,7 +12,7 @@ const WorkGallery = () => {
     const fetchVideos = async () => {
       try {
         const response = await Axios.get(
-          `${process.env.REACT_APP_BASE_URL_BACKEND}/api/works`
+          `https://api.cloudfixmedia.com/api/works`
         );
         const videoData = response.data;
 
