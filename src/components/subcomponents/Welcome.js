@@ -30,7 +30,7 @@ const Welcome = () => {
               <input
                 type="email"
                 placeholder="Enter your Email"
-                class="block px-4 py-3 text-gray-800 rounded-full border border-gray-300 focus:outline-none focus:border-buttonPrimaryColor mr-3 bg-slate-100 w-auto md:w-72"
+                className="block px-4 py-3 text-gray-800 rounded-full border border-gray-300 focus:outline-none focus:border-buttonPrimaryColor mr-3 bg-slate-100 w-auto md:w-72"
               />
               <button className=" bg-buttonPrimaryColor hover:bg-buttonSecondaryColor hover:text-black rounded-full h-30 w-28 md:w-32 text-white">
                 Lets Talk

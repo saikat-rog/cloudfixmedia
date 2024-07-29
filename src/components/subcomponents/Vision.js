@@ -21,7 +21,7 @@ const Vision = () => {
           {/* Vision details */}
           <div className="flex md:flex-1 flex-wrap gap-8 justify-center">
             {VisionDetails.map((item) => (
-              <div className="flex flex-col items-center">
+              <div key={item.id} className="flex flex-col items-center">
                 <img src={item.icon} alt="video" width="110" height="110" />
                 <div className="p-5 text-3xl">{item.text}</div>
               </div>

@@ -7,11 +7,11 @@ const WhyUs = () => {
         <span className=" text-5xl md:text-7xl font-semibold text-textColorLarge">
           Why CloudFixMedia?
         </span>
-        <p className=" text-slate-500 text-xl md:text-2xl">
-          <div className=" pt-5">
+        <div className=" text-slate-500 text-xl md:text-2xl">
+          <p className=" pt-5">
             With over 2-3 years of industry expertise, we possess a deep
             understanding of algorithmic principles and their application.
-          </div>
+          </p>
           <br />
           <div>
             Our track record includes collaborations with numerous esteemed
@@ -23,7 +23,7 @@ const WhyUs = () => {
             team is available around the clock to swiftly address and resolve
             issues.
           </div>
-        </p>
+        </div>
         <div className=" flex flex-col items-start pt-5 ">
           <button className=" rounded-full bg-buttonPrimaryColor hover:bg-buttonSecondaryColor hover:text-black text-xl text-white p-5 ">Start your journey with us</button>
         </div>
