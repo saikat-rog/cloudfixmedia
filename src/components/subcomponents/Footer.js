@@ -15,7 +15,7 @@ const Footer = () => {
 
   return (
     <footer className=" bg-blue-950 text-white p-6 md:p-12">
-      <div className=" grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-10">
+      <div className=" grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-10">
         {/* Grid1: Brand Statement */}
         <div className="">
           <div className=" flex flex-col gap-5">
@@ -59,15 +59,6 @@ const Footer = () => {
               <button className=" bg-buttonPrimaryColor hover:bg-buttonSecondaryColor hover:text-black rounded-md p-2 w-20">Submit</button>
             </div>
           </div>
-        </div>
-        {/* Grid4: Appointment schedule */}
-        <div className=" flex flex-col gap-5">
-          <h3 className=" text-xl font-bold">Schedule your appointment</h3>
-          <form className=" text-black flex flex-col gap-4 items-start">
-            <input className=" p-2 rounded-lg" type="date"/>
-            <button className=" text-white bg-buttonPrimaryColor hover:bg-buttonSecondaryColor hover:text-black px-5 py-2 rounded-lg">Book</button>
-          </form>
-          
         </div>
       </div>
     </footer>
