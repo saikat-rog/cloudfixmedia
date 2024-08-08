@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faLocationDot,
@@ -7,45 +7,93 @@ import {
   faClock,
 } from "@fortawesome/free-solid-svg-icons";
 import { Helmet } from "react-helmet";
+import Axios from "axios";
 
 const Contacts = () => {
+  const [contactFormData, setContactFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: ""
+  });
+
+  const handleContactFormInput = (e) => {
+    const { name, value } = e.target;
+    setContactFormData({
+      ...contactFormData,
+      [name]: value
+    });
+  };
+
+  const handleContactFormSubmit = async (e) => {
+    e.preventDefault();
+    alert("Clicked");
+    console.log("Clicked");
+
+    try {
+      const response = await Axios.post(
+        `${process.env.REACT_APP_BASE_URL_BACKEND}/api/submitContactForm`,
+        contactFormData,
+        {
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        }
+      );
+      console.log(response.data);
+    } catch (error) {
+      console.log(`Error: ${error}`);
+    }
+  };
+
   return (
-    <div className=" flex flex-col md:flex-row w-full min-h-screen">
+    <div className="flex flex-col md:flex-row w-full min-h-screen">
       <Helmet><title>Contact</title></Helmet>
       {/* Left col for the form */}
-      <div className=" bg-sectionBackground w-full md:w-1/3 py-28 px-16">
-        <div className=" flex flex-col gap-5">
-          <div className=" text-textColorLarge font-bold text-2xl md:text-4xl">
+      <div className="bg-sectionBackground w-full md:w-1/3 py-28 px-16">
+        <div className="flex flex-col gap-5">
+          <div className="text-textColorLarge font-bold text-2xl md:text-4xl">
             Send us a message
           </div>
-          <form className=" flex flex-col gap-7">
+          <form className="flex flex-col gap-7" onSubmit={handleContactFormSubmit}>
             <input
               type="text"
+              name="name"
               placeholder="Name"
               className="bg-transparent border-b-2 border-slate-300 p-3 focus:outline-none"
-            ></input>
+              onChange={handleContactFormInput}
+            />
             <input
               type="text"
+              name="email"
               placeholder="Email"
               className="bg-transparent border-b-2 border-slate-300 p-3 focus:outline-none"
-            ></input>
+              onChange={handleContactFormInput}
+            />
             <input
               type="text"
+              name="phone"
               placeholder="Phone"
               className="bg-transparent border-b-2 border-slate-300 p-3 focus:outline-none"
-            ></input>
+              onChange={handleContactFormInput}
+            />
             <textarea
+              name="message"
               placeholder="Your message"
               className="bg-transparent border-b-2 border-slate-300 p-3 focus:outline-none"
-            ></textarea>
-            <button className="bg-buttonPrimaryColor hover:bg-buttonSecondaryColor hover:text-black rounded-full h-10 w-28 text-white">
+              onChange={handleContactFormInput}
+            />
+            <button
+              type="submit"
+              className="bg-buttonPrimaryColor hover:bg-buttonSecondaryColor hover:text-black rounded-full h-10 w-28 text-white"
+            >
               Send
             </button>
           </form>
         </div>
       </div>
       {/* Right col for the contact info */}
-      <div className=" w-full md:w-2/3  py-28 px-10 md:px-20">
+      <div className="w-full md:w-2/3 py-28 px-10 md:px-20">
         <div className="flex flex-col gap-16">
           {/* Heading */}
           <div className="flex flex-col">
@@ -55,7 +103,7 @@ const Contacts = () => {
             <span>We are here to serve you.</span>
           </div>
           {/* Details */}
-          <div className=" flex flex-col gap-8 items-start ml-10">
+          <div className="flex flex-col gap-8 items-start ml-10">
             {/* Location */}
             <div className="flex gap-5 text-xl">
               <FontAwesomeIcon icon={faLocationDot} />
