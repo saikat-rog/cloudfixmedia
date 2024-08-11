@@ -17,6 +17,8 @@ const Contacts = () => {
     message: ""
   });
 
+  const [isSent, setIsSent] = useState(false);
+
   const handleContactFormInput = (e) => {
     const { name, value } = e.target;
     setContactFormData({
@@ -27,9 +29,6 @@ const Contacts = () => {
 
   const handleContactFormSubmit = async (e) => {
     e.preventDefault();
-    alert("Clicked");
-    console.log("Clicked");
-
     try {
       const response = await Axios.post(
         `${process.env.REACT_APP_BASE_URL_BACKEND}/api/submitContactForm`,
@@ -40,7 +39,12 @@ const Contacts = () => {
           }
         }
       );
+      setIsSent(true);
       console.log(response.data);
+      setTimeout(() => {
+        setIsSent(false);
+      }, 5000);
+    
     } catch (error) {
       console.log(`Error: ${error}`);
     }
@@ -55,6 +59,7 @@ const Contacts = () => {
           <div className="text-textColorLarge font-bold text-2xl md:text-4xl">
             Send us a message
           </div>
+          {isSent && <div className=" text-black text-3xl">Your message is sent!</div>}
           <form className="flex flex-col gap-7" onSubmit={handleContactFormSubmit}>
             <input
               type="text"
